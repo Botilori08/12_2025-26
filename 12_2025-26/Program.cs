@@ -7,7 +7,7 @@
             Console.WriteLine("Hello, World!");
 
             Console.WriteLine("Szia");
-            Console.WriteLine();
+
         }
     }
 }
