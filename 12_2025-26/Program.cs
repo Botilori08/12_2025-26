@@ -8,7 +8,6 @@
 
             Console.WriteLine("Szia");
             Console.WriteLine();
-            Console.WriteLine();
         }
     }
 }
