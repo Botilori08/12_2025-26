@@ -6,6 +6,7 @@
         {
             Muzliszelet muzliszelet = new Muzliszelet();
             muzliszelet.Nev = "Barackos műzliszelet";
+
             muzliszelet.Elfogyasztas();
         }
     }
