@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OOPGyak5", "OOPGyak5\OOPGya
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OOPGyak7", "OOPGyak7\OOPGyak7.csproj", "{644349B3-C27C-43EE-894A-47D7D199F50F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OOPGyakDogara", "OOPGyakDogara\OOPGyakDogara.csproj", "{D5975C0B-B85F-4A51-9D8C-DB4140C09DA9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +59,10 @@ Global
 		{644349B3-C27C-43EE-894A-47D7D199F50F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{644349B3-C27C-43EE-894A-47D7D199F50F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{644349B3-C27C-43EE-894A-47D7D199F50F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D5975C0B-B85F-4A51-9D8C-DB4140C09DA9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5975C0B-B85F-4A51-9D8C-DB4140C09DA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5975C0B-B85F-4A51-9D8C-DB4140C09DA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D5975C0B-B85F-4A51-9D8C-DB4140C09DA9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
