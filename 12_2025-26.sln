@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OOPGyak7", "OOPGyak7\OOPGya
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OOPGyakDogara", "OOPGyakDogara\OOPGyakDogara.csproj", "{D5975C0B-B85F-4A51-9D8C-DB4140C09DA9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Erettsegi_2025okt", "Erettsegi_2025okt\Erettsegi_2025okt.csproj", "{4C0F976C-CC3C-4DCC-9E26-E329E1BA7401}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{D5975C0B-B85F-4A51-9D8C-DB4140C09DA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D5975C0B-B85F-4A51-9D8C-DB4140C09DA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D5975C0B-B85F-4A51-9D8C-DB4140C09DA9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C0F976C-CC3C-4DCC-9E26-E329E1BA7401}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C0F976C-CC3C-4DCC-9E26-E329E1BA7401}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C0F976C-CC3C-4DCC-9E26-E329E1BA7401}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C0F976C-CC3C-4DCC-9E26-E329E1BA7401}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
