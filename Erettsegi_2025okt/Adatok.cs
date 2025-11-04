@@ -10,6 +10,7 @@ namespace Erettsegi_2025okt
     {
         public int km;
         public string jelzes;
+        public bool varosban;
 
         public Adatok(string sor)
         {
@@ -26,8 +27,56 @@ namespace Erettsegi_2025okt
         
         public bool isTelepules()
         {
-
+            return jelzes.Length >= 4;
         }
 
+        public int sebessegHatar()
+        {
+            try
+            {
+                int sebesseg = int.Parse(this.jelzes);
+                return sebesseg;
+            }
+            catch
+            {
+                if (isTelepules())
+                {
+                    return 50;
+                }
+                else if(jelzes == "]")
+                {
+                    return 90;
+                }
+                else if (jelzes == "#")
+                {
+                    if(varosban)
+                    {
+                        return 50;
+                    }
+                    else
+                    {
+                        return 90;
+                    }
+
+                }
+                else if (jelzes == "%")
+                {
+                    if (varosban)
+                    {
+                        return 50;
+                    }
+                    else
+                    {
+                        return 90;
+                    }
+                }
+                else
+                {
+                    return 0;
+                }
+
+
+            }
+        }
     }
 }
