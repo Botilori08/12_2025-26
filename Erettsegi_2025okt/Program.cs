@@ -1,38 +1,69 @@
 ﻿namespace Erettsegi_2025okt
 {
-    internal class Program
-    {
-        static void Main(string[] args)
-        {
-            string[] sorok = File.ReadAllLines("ut.txt");
+	internal class Program
+	{
+		static void Main(string[] args)
+		{
+			string[] sorok = File.ReadAllLines("ut.txt");
 
-            List <Adatok> adatok = new List <Adatok>();
+			List <Adatok> adatok = new List <Adatok>();
 
 
-            int teljesUt = int.Parse(sorok[0]);
+			double teljesUt = double.Parse(sorok[0]);
 
-            bool varosban = false;
+			bool varosban = false;
 
-            for(int i = 1; i < sorok.Length; i++)
-            {
-                adatok.Add(new Adatok(sorok[i]));
-                adatok[i - 1].varosban = adatok[i-1].isTelepules();
-            }
+			for(int i = 1; i < sorok.Length; i++)
+			{
+				adatok.Add(new Adatok(sorok[i]));
+				if(adatok[i - 1].isTelepules()) varosban = true;
+				
+				if (adatok[i-1].jelzes == "]") varosban=false;
 
-            Console.WriteLine("2.feladat");
+				adatok[i-1].varosban = varosban;
+			}
 
-            for(int i = 0; i < adatok.Count; i++)
-            {
-                if (adatok[i].isTelepules())
-                {
-                    Console.WriteLine(adatok[i].jelzes);
+			Console.WriteLine("2.feladat");
+
+			for(int i = 0; i < adatok.Count; i++)
+			{
+				if (adatok[i].isTelepules())
+				{
+					Console.WriteLine(adatok[i].jelzes);
+				}
+			}
+
+			Console.WriteLine("3.feladat");
+			Console.Write("Adja meg a vizsgált szakasz hosszát km-ben! ");
+			
+			double beKm = Convert.ToDouble(Console.ReadLine());
+
+			for (int i = 0; i < adatok.Count; i++)
+			{
+				if (adatok[i].km <= beKm*1000)
+				{
+                    Console.WriteLine(adatok[i].km);
                 }
-            }
+				
+			}
 
-            Console.WriteLine("3.feladat");
-            Console.Write("Adja meg a vizsgált szakasz hosszát km-ben! ");
-            
-            double beKm = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("4.feladat");
+
+			int varosKezdet = 0;
+			int varosKm = 0;
+			for(int i = 0;i < adatok.Count; i++)
+			{
+				if (adatok[i].isTelepules())
+				{
+					varosKezdet = adatok[i].km;
+				}
+				if (adatok[i].jelzes == "]")
+				{
+					varosKm += adatok[i].km - varosKezdet;
+				}
+			}
+
+            Console.WriteLine($"Az út {varosKm / teljesUt:0.00%}-a vezet településen belül.");
 
 
 
@@ -40,6 +71,6 @@
 
 
 
-        }
-    }
+		}
+	}
 }
