@@ -16,7 +16,7 @@
             for(int i = 1; i < sorok.Length; i++)
             {
                 adatok.Add(new Adatok(sorok[i]));
-                adatok[i - 1].isTelepules();
+                adatok[i - 1].varosban = adatok[i-1].isTelepules();
             }
 
             Console.WriteLine("2.feladat");
