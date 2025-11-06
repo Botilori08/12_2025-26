@@ -30,6 +30,25 @@ namespace Erettsegi_2025okt
             return jelzes.Length >= 4;
         }
 
+        public bool isKorlatozoTabla()
+        {
+            try
+            {
+                int sebesseg = int.Parse(this.jelzes);
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+
+        public bool isVarosVege()
+        {
+            return jelzes == "]";
+        }
+
+
         public int sebessegHatar()
         {
             try
@@ -37,7 +56,7 @@ namespace Erettsegi_2025okt
                 int sebesseg = int.Parse(this.jelzes);
                 return sebesseg;
             }
-            catch
+            catch (Exception)
             {
                 if (isTelepules())
                 {
