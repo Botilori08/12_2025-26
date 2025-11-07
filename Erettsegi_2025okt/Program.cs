@@ -42,12 +42,12 @@
 			{
 				if (adatok[i].km <= beKm*1000)
 				{
-                    Console.WriteLine(adatok[i].km);
-                }
+					Console.WriteLine(adatok[i].km);
+				}
 				
 			}
 
-            Console.WriteLine("4.feladat");
+			Console.WriteLine("4.feladat");
 
 			int varosKezdet = 0;
 			int varosKm = 0;
@@ -63,12 +63,12 @@
 				}
 			}
 
-            Console.WriteLine($"Az út {varosKm / teljesUt:0.00%}-a vezet településen belül.");
+			Console.WriteLine($"Az út {varosKm / teljesUt:0.00%}-a vezet településen belül.");
 
 
-            Console.WriteLine("5.feladat");
+			Console.WriteLine("5.feladat");
 
-            Console.Write("Adja meg egy település nevét! ");
+			Console.Write("Adja meg egy település nevét! ");
 			string varosBe = Console.ReadLine();
 
 
@@ -83,7 +83,7 @@
 					varosKezdoIndex = i;
 					int kezdoKm = adatok[i].km;
 					int tablaDb = 0;
-                    while(!adatok[i].isVarosVege())
+					while(!adatok[i].isVarosVege())
 					{
 						if (adatok[i].isKorlatozoTabla())
 						{
@@ -93,13 +93,13 @@
 					}
 					varosVegIndex = i;
 					int varosHossz = adatok[i].km - kezdoKm;
-                    Console.WriteLine($"A sebességkorlátozó táblák száma: {tablaDb}");
-                    Console.WriteLine($"Az út hossza a településen belül: {varosHossz} méter");
+					Console.WriteLine($"A sebességkorlátozó táblák száma: {tablaDb}");
+					Console.WriteLine($"Az út hossza a településen belül: {varosHossz} méter");
 					break;
-                }
+				}
 			}
 
-            Console.WriteLine("6.feladat");
+			Console.WriteLine("6.feladat");
 
 			int kovetkezoVarosIndex = -1;
 
@@ -112,13 +112,50 @@
 				}
 			}
 
-            
+			int kovetkezoVarosTavolsag = Convert.ToInt32(teljesUt);
 
+			
 
+			if(kovetkezoVarosIndex > -1)
+			{
+				kovetkezoVarosTavolsag = adatok[kovetkezoVarosIndex].km - adatok[varosVegIndex].km; 
+			}
+			//Console.WriteLine(kovetkezoVarosTavolsag);
 
+            int elozoVarosVege = -1;
+			int elozoVarosEleje = -1;
 
+            for (int i = varosKezdoIndex-1; i >= 0; i--)
+			{
+				if (adatok[i].isVarosVege())
+				{
+					elozoVarosVege = i;
+					//break;
+				}
+                if (adatok[i].isTelepules())
+                {
+                    elozoVarosEleje = i;
+					break;
+                }
+            }
 
+			int elozoVarosTavolsag = Convert.ToInt32(teljesUt);
+			if(elozoVarosVege > -1)
+			{
+				elozoVarosTavolsag = adatok[varosKezdoIndex].km - adatok[elozoVarosVege].km;
+			}
 
+			if(elozoVarosTavolsag >= kovetkezoVarosTavolsag)
+			{
+                Console.WriteLine($"A legközelebbi település {adatok[elozoVarosEleje].jelzes}");
+            }
+			else
+			{
+                Console.WriteLine($"A legközelebbi település {adatok[kovetkezoVarosIndex].jelzes}");
+			}
+
+			
+			//Console.WriteLine(elozoVarosTavolsag);
 
 		}
 	}
