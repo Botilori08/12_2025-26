@@ -1,4 +1,6 @@
-﻿namespace Erettsegi_2025okt
+﻿using System.Xml;
+
+namespace Erettsegi_2025okt
 {
 	internal class Program
 	{
@@ -32,6 +34,12 @@
 					Console.WriteLine(adatok[i].jelzes);
 				}
 			}
+			Console.WriteLine("###########");
+            Console.WriteLine(string.Join("\n",adatok
+				.Where(e => e.isTelepules())
+				.Select(e=> e.jelzes)));
+
+            Console.WriteLine();
 
 			Console.WriteLine("3.feladat");
 			Console.Write("Adja meg a vizsgált szakasz hosszát km-ben! ");
@@ -47,7 +55,15 @@
 				
 			}
 
-			Console.WriteLine("4.feladat");
+            Console.WriteLine("######################");
+
+            Console.WriteLine(adatok
+				.Where(e => e.km <= beKm * 1000)
+				.Min(e => e.sebessegHatar())
+				);
+
+            Console.WriteLine();
+            Console.WriteLine("4.feladat");
 
 			int varosKezdet = 0;
 			int varosKm = 0;
@@ -63,8 +79,17 @@
 				}
 			}
 
-			Console.WriteLine($"Az út {varosKm / teljesUt:0.00%}-a vezet településen belül.");
+			Console.WriteLine("{0:0.00%}",adatok
+				.Where(e => e.isTelepules() || e.isVarosVege())
+				.Select(e => e.km)
+				.Chunk(2)
+				.Select(e => e[1] - e[0])
+				.Sum() / teljesUt
+				);
 
+            Console.WriteLine($"Az út {varosKm / teljesUt:0.00%}-a vezet településen belül.");
+
+            Console.WriteLine();
 
 			Console.WriteLine("5.feladat");
 

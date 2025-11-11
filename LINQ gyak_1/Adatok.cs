@@ -24,7 +24,7 @@ namespace Erettsegi_2025okt
             this.km = km;
             this.jelzes = jelzes;
         }
-        
+
         public bool isTelepules()
         {
             return jelzes.Length >= 4;
@@ -62,13 +62,13 @@ namespace Erettsegi_2025okt
                 {
                     return 50;
                 }
-                else if(jelzes == "]")
+                else if (jelzes == "]")
                 {
                     return 90;
                 }
                 else if (jelzes == "#")
                 {
-                    if(varosban)
+                    if (varosban)
                     {
                         return 50;
                     }
