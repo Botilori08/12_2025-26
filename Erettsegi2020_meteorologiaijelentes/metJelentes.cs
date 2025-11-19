@@ -12,6 +12,8 @@ namespace Erettsegi2020_meteorologiaijelentes
 		public string ido;
 		public string szeliranyEsErosseg;
 		public int homerseklet;
+		public int ora;
+		public int perc;
 
 		public metJelentes(string sor)
 		{
