@@ -43,6 +43,21 @@ namespace Erettsegi2020_meteorologiaijelentes
 			string.Join(":",this.ido.ToArray().Chunk(2).Select(x => x[0] + x[1]));
 		}
 
+		public bool szelcsend()
+		{
+			return this.szeliranyEsErosseg == "00000";
+			if(this.szeliranyEsErosseg == "00000")
+			{
+				return true;
+			}
+			else
+			{
+				return false;
+			}
+		}
+
+
+
 
 
 	}

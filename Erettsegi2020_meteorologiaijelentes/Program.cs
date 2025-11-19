@@ -21,13 +21,28 @@ namespace Erettsegi2020_meteorologiaijelentes
 
             Console.WriteLine("3.feladat");
 
-            var legkisebb = adatLista.Where(a => a.homerseklet == adatLista.Min(x => x.homerseklet)).Last();
+            var legkisebb = adatLista.Where(a => a.homerseklet == adatLista.Min(x => x.homerseklet)).First();//.FirstOrDefault(new metJelentes("   0"));
 
-            var legnagyobb = adatLista.Where(a => a.homerseklet == adatLista.Max(x => x.homerseklet)).Last();
+            var legnagyobb = adatLista.Where(a => a.homerseklet == adatLista.Max(x => x.homerseklet)).First();//.FirstOrDefault(new metJelentes("   0"));
 
-            Console.WriteLine($"A legalacsonyabb hőmérséklet: {legkisebb.telepules} {legkisebb.idoString()} {legkisebb.homerseklet} fok");
+            //Console.WriteLine($"A legalacsonyabb hőmérséklet: {legkisebb.telepules} {legkisebb.idoString()} {legkisebb.homerseklet} fok");
 
-            Console.WriteLine($"A legmagasabb hőmérséklet: {legnagyobb.telepules} {legnagyobb.idoString()} {legnagyobb.homerseklet} fok");
+            //Console.WriteLine($"A legmagasabb hőmérséklet: {legnagyobb.telepules} {legnagyobb.idoString()} {legnagyobb.homerseklet} fok");
+
+            //másik megoldás
+            var rendezett = adatLista.OrderBy(adat => adat.homerseklet);
+
+            Console.WriteLine($"A legalacsonyabb hőmérséklet: {rendezett.First().telepules} {rendezett.First().idoString()} {rendezett.First().homerseklet} fok \r\nA legmagasabb hőmérséklet: {rendezett.Last().telepules} {rendezett.Last().idoString()} {rendezett.Last().homerseklet} fok");
+
+            Console.WriteLine("4.feladat");
+
+            var csendesek = adatLista.Where(adat => adat.szelcsend()).Select(adat => adat.telepules +" "+adat.idoString());
+
+            Console.WriteLine(string.Join("\n", csendesek));
+
+
+            
+            
 
         }
     }
