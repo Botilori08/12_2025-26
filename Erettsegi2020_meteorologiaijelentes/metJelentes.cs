@@ -34,6 +34,21 @@ namespace Erettsegi2020_meteorologiaijelentes
             this.ido = ido;
             this.szeliranyEsErosseg = szeliranyEsErosseg;
             this.homerseklet = homerseklet;
+
+
+			if(this.ido.Length == 4)
+			{
+
+                this.ora = int.Parse(this.ido.Substring(0, 2));
+                this.perc = int.Parse(this.ido.Substring(2));
+            }
+			else
+			{
+
+                this.ora = 0;
+                this.perc = 0;
+            }
+
         }
 
 		public string idoString()
