@@ -42,12 +42,18 @@ namespace Erettsegi2020_meteorologiaijelentes
 			Console.WriteLine("5.feladat");
 
 			var kozepek = adatLista
-				.Where(adat => new int[] { 1, 9, 11, 13, 17, 19 }.Contains(adat.ora))
+				.Where(adat => new int[] { 1, 7, 13, 19 }.Contains(adat.ora))
 				.GroupBy(adat => adat.telepules)
-				.Select(adat => new { telepules = adat.Key, atlag = adat.Average(x => x.homerseklet) });
+				.Select(adat => new { telepules = adat.Key, atlag = adat.Count() == 4 ? Math.Round(adat.Average(x => x.homerseklet)).ToString() : "NA" }).ToList();
+
+			var ingadozas = adatLista
+				.GroupBy(adat => adat.telepules)
+				.Select(adat => new { telepules = adat.Key, ingadozas = adat.Max(x => x.homerseklet) - adat.Min(y => y.homerseklet)}).ToList();
 
 
-            Console.WriteLine(kozepek);
+            
+
+
 
 
 			
