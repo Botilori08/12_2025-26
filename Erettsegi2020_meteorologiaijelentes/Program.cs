@@ -42,7 +42,7 @@ namespace Erettsegi2020_meteorologiaijelentes
 			Console.WriteLine("5.feladat");
 
 			var kozepek = adatLista
-				.Where(adat => new int[] { 1, 7, 13, 19 }.Contains(adat.ora))
+				.Where(adat => new int[] { 1, 7, 13, 19 }.Contains(adat.ora) && adat.perc == 0)
 				.GroupBy(adat => adat.telepules)
 				.Select(adat => new { telepules = adat.Key, atlag = adat.Count() == 4 ? Math.Round(adat.Average(x => x.homerseklet)).ToString() : "NA" }).ToList();
 
@@ -51,13 +51,18 @@ namespace Erettsegi2020_meteorologiaijelentes
 				.Select(adat => new { telepules = adat.Key, ingadozas = adat.Max(x => x.homerseklet) - adat.Min(y => y.homerseklet)}).ToList();
 
 
-            
+			var kozos = kozepek.Join(ingadozas, i => i.telepules, j=> j.telepules,(i,j) => new {i.telepules, i.atlag, j.ingadozas})
+				.Select(adat => $"{adat.telepules} Középhőmérséklet: {adat.atlag}; Hőmérséklet-ingadozás: {adat.ingadozas}");
+
+            Console.WriteLine(string.Join("\n",kozos));
+
+            //BP Középhőmérséklet: 23; Hőmérséklet-ingadozás: 8
 
 
 
 
-			
 
-		}
-	}
+
+        }
+    }
 }
