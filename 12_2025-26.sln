@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Erettsegi_2025okt", "Eretts
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Erettsegi2020_meteorologiaijelentes", "Erettsegi2020_meteorologiaijelentes\Erettsegi2020_meteorologiaijelentes.csproj", "{29388DBA-5E3E-4F47-B859-CC7B9A8F0C71}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jelado", "Jelado\Jelado.csproj", "{DF658042-BF2F-41AE-BFAE-A2AF3180D97A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +77,10 @@ Global
 		{29388DBA-5E3E-4F47-B859-CC7B9A8F0C71}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{29388DBA-5E3E-4F47-B859-CC7B9A8F0C71}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{29388DBA-5E3E-4F47-B859-CC7B9A8F0C71}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF658042-BF2F-41AE-BFAE-A2AF3180D97A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF658042-BF2F-41AE-BFAE-A2AF3180D97A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF658042-BF2F-41AE-BFAE-A2AF3180D97A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF658042-BF2F-41AE-BFAE-A2AF3180D97A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
