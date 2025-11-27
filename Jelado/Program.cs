@@ -12,6 +12,26 @@
 	
 			adatok = sorok.ToList().Select(x => new Adat(x)).ToList();
 
+			Console.WriteLine();
+            Console.WriteLine("2.feladat");
+
+			Console.Write("Adja meg a jel sorszámát! ");
+            int bekert = Convert.ToInt32(Console.ReadLine());
+
+			var megfeleloJel = adatok[bekert-1];
+
+            Console.WriteLine($"x={megfeleloJel.x} y={megfeleloJel.y}");
+
+            /*Másik megoldások
+            Console.WriteLine(adatok[bekert-1].koordinatak());
+
+            Console.WriteLine(adatok.Where((e,i) => i == bekert-1).First().koordinatak());
+			*/
+
+            Console.WriteLine($"4.feladat\nIdőtartam: {adatok[0].eltelt(adatok.Last())}");
+			
+
+
         }
 	}
 }

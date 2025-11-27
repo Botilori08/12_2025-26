@@ -13,7 +13,7 @@ namespace Jelado
         public int masodperc;
         public int x;
         public int y;
-
+        public int egeszIdoMasodpercben;
         public Adat(int ora,int perc,int masodperc,int x,int y)
         {
             eltarol(ora, perc, masodperc,x,y);
@@ -32,6 +32,27 @@ namespace Jelado
             this.masodperc = masodperc;
             this.x = x;
             this.y = y;
+
+            this.egeszIdoMasodpercben = 3600* this.ora+60*this.perc + this.masodperc;
+
+        }
+
+        public string koordinatak()
+        {
+            return $"x={this.x} y={this.y}";
+        }
+
+        public int eltelt(Adat masik)
+        {
+            return Math.Abs(this.egeszIdoMasodpercben - masik.egeszIdoMasodpercben);
+        }
+
+        public string elteltIdo(Adat masik)
+        {
+            int mp = eltelt(masik);
+            return $"{mp / 3600}:{mp % 60 / 60}:{}";
+
+
         }
 
     }
