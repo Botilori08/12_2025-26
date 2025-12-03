@@ -50,7 +50,7 @@ namespace Jelado
         public string elteltIdo(Adat masik)
         {
             int mp = eltelt(masik);
-            return $"{mp / 3600}:{mp % 60 / 60}:{}";
+            return $"{mp / 3600}:{mp % 60 / 60}:{mp%3600%60}";
 
 
         }

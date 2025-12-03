@@ -29,7 +29,24 @@
 			*/
 
             Console.WriteLine($"4.feladat\nIdőtartam: {adatok[0].eltelt(adatok.Last())}");
-			
+
+            Console.WriteLine("5.feladat");
+
+			int minX = adatok.Min(x => x.x);
+
+			int maxX = adatok.Max(x => x.x);
+
+			int minY = adatok.Min(y => y.y);
+
+			int maxY = adatok.Max(y => y.y);
+
+
+			int[] tomb = { adatok.Min(x => x.x), adatok.Max(x => x.x), adatok.Min(y => y.y), adatok.Max(y => y.y) };
+
+			var teglalap = new { balalso = new { x = adatok.Min(x => x.x), y = adatok.Min(y => y.y) }, 
+				jobbFelso = new { x = adatok.Max(x => x.x), y = adatok.Max(y => y.y) } };
+
+            Console.WriteLine($"Bal alsó: {teglalap.balalso.x} {teglalap.balalso.y}, jobb felső: {teglalap.jobbFelso.x} {teglalap.jobbFelso.y}");
 
 
         }

@@ -57,6 +57,7 @@ namespace Erettsegi2020_meteorologiaijelentes
             Console.WriteLine(string.Join("\n",kozos));
 
             //BP Középhőmérséklet: 23; Hőmérséklet-ingadozás: 8
+			
 
 
 
