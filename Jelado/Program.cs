@@ -48,6 +48,18 @@
 
             Console.WriteLine($"Bal alsó: {teglalap.balalso.x} {teglalap.balalso.y}, jobb felső: {teglalap.jobbFelso.x} {teglalap.jobbFelso.y}");
 
+            Console.WriteLine("6.feladat");
+			var osszeg = adatok.Skip(1).Select((x,i) => x.tavolsag(adatok[i])).Sum();
+
+            Console.WriteLine($"Elmozdulás: {osszeg:0.000} egység");
+
+			StreamWriter sw = new StreamWriter("kimarad.txt");
+
+
+
+
+			sw.Close();
+
 
         }
 	}
