@@ -58,7 +58,7 @@
 			var kimarad = adatok
 				.Skip(1)
 				.Where((adat,i) => adat.kimaradt(adatok[i]).darab > 0)
-				.Select(adat => adat.ora+" "+adat.perc+" "+adat.masodperc+" "+adat.kimaradt());
+				.Select(adat => adat.ora+" "+adat.perc+" "+adat.masodperc+" "+adat.kimaradt);
 
 
             sw.Close();
