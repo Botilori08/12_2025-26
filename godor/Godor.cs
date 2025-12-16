@@ -12,7 +12,27 @@ namespace godor
 
         public Godor()
         {
+            melysegek = new List<Melyseg>();
+        }
 
+        public void Add(Melyseg melyseg)
+        {
+            melysegek.Add(melyseg);
+        }
+
+        public bool Contains(int meter)
+        {
+
+        }
+
+        public Melyseg getFirst()
+        {
+            return melysegek[0];
+        }
+
+        public Melyseg getLast()
+        {
+            return melysegek.Last();
         }
 
     }

@@ -8,7 +8,7 @@
             List<Melyseg> melysegek = new List<Melyseg>();
 
             sorok.ToList()
-                .ForEach(x => melysegek.Add(new Melyseg(int.Parse(x))));
+                .ForEach(x => melysegek.Add(new Melyseg(int.Parse(x), melysegek.Count+1)));
 
             Console.WriteLine("1. feladat:");
             Console.WriteLine($"A fájl adatainak száma: {melysegek.Count}");
@@ -34,9 +34,31 @@
             Console.WriteLine($"A gödrök száma: {File.ReadAllLines("godrok.txt").Length}");
             
 
+            List<Godor> godrok = new List<Godor>();
+
+            godrok.Add(new Godor());
+            melysegek.ForEach(x =>
+            {
+                if (x.melyseg > 0)
+                {
+                    godrok.Last().Add(x);
+                }
+                else
+                {
+                    if(godrok.Last().melysegek.Count  > 0)
+                    {
+                        godrok.Add(new Godor());
+                    }
+                    
+                }
+
+            });
+
+            godrok.Remove(godrok.Last());
 
 
 
+            Console.WriteLine();
 
         }
     }
