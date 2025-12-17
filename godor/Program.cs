@@ -56,9 +56,19 @@
 
             godrok.Remove(godrok.Last());
 
+            Console.WriteLine("6. feladat");
+            var talaltGodor = godrok.Where(egyGodor => egyGodor.Contains(tavolsag)).ToList();
 
+            if( talaltGodor.Count == 0 )
+            {
+                Console.WriteLine("Az adott helyen nincs gödör.");
+            }
+            else
+            {
+                Console.WriteLine($"a)\r\nA gödör kezdete_ {talaltGodor.First().getFirst().meter} méter, a gödör vége {talaltGodor.Last().getLast()}");
+            }
 
-            Console.WriteLine();
+                Console.WriteLine();
 
         }
     }

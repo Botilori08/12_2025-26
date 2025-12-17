@@ -22,7 +22,7 @@ namespace godor
 
         public bool Contains(int meter)
         {
-
+            return getFirst().meter<= meter && getFirst().meter>= meter;
         }
 
         public Melyseg getFirst()
@@ -33,6 +33,14 @@ namespace godor
         public Melyseg getLast()
         {
             return melysegek.Last();
+        }
+
+        public bool isMonotonous()
+        {
+            var eredmeny = melysegek.Skip(1)
+                .Select((egyMelyseg, index) => egyMelyseg.meter >= melysegek[index].meter);
+
+            return false;
         }
 
     }
