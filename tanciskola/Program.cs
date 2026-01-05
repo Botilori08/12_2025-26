@@ -48,10 +48,36 @@
             //„Vilma nem táncolt samba-t.”
 
             var vilmapar = tancok.Where(x => x.no == "Vilma" && x.tanc == bekertTanc)
-                .Select(x => x.ferfi)
-                .First();
+                .Select(x => x.ferfi).ToList();
 
-            Console.WriteLine(vilmapar);
+            if (vilmapar.Count == 0)
+            {
+                Console.WriteLine($"Vilma nem táncolt {bekertTanc}-t.");
+            }
+            else
+            {
+                Console.WriteLine($"A {bekertTanc} bemutatóján Vilma párja {vilmapar[0]} volt.");
+            }
+
+
+            var lanyok = tancok.Select(x => x.no).Distinct().ToList();
+
+            var fiuk = tancok.Select(x => x.ferfi).Distinct().ToList();
+
+            StreamWriter sw = new StreamWriter("szereplok.txt");
+
+            sw.WriteLine($"Lányok: {string.Join(", ", lanyok)}\nFiúk: {string.Join(", ", fiuk)}");
+
+            sw.Close();
+
+            Console.WriteLine("7.feladat");
+            var legtobbetTancoltfiuk = tancok.GroupBy(x => x.ferfi).OrderBy(x => x.Count()).Select(x => x.Key).ToList();
+
+            Console.WriteLine($"A legtöbbet táncolt fiú(k): {legtobbetTancoltfiuk}");
+
+            var legtobbetTancoltlanyok = tancok.GroupBy(x => x.no).OrderBy(x => x.Count()).Select(x => x.Key).ToList();
+
+            Console.WriteLine($"A legtöbbet táncolt lány(ok): {legtobbetTancoltlanyok}");
 
         }
     }
