@@ -33,6 +33,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tanciskola", "tanciskola\ta
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OOP_Static", "OOP_Static\OOP_Static.csproj", "{85A4905C-A255-4E99-B11F-2EDDDCC13781}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "operator_feluliras", "operator_feluliras\operator_feluliras.csproj", "{28191268-B292-4092-AA6A-72F3B5449A1B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -99,6 +101,10 @@ Global
 		{85A4905C-A255-4E99-B11F-2EDDDCC13781}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{85A4905C-A255-4E99-B11F-2EDDDCC13781}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{85A4905C-A255-4E99-B11F-2EDDDCC13781}.Release|Any CPU.Build.0 = Release|Any CPU
+		{28191268-B292-4092-AA6A-72F3B5449A1B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28191268-B292-4092-AA6A-72F3B5449A1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28191268-B292-4092-AA6A-72F3B5449A1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28191268-B292-4092-AA6A-72F3B5449A1B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
