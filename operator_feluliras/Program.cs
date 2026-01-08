@@ -28,6 +28,10 @@
             var sz7 = sz2+2.3;
             Console.WriteLine(sz7);
 
+            var sz8 = sz2 - 2;
+            Console.WriteLine(sz8);
+
+
 
         }
     }
