@@ -37,6 +37,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "operator_feluliras", "opera
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "operatorFeluliras_01.03", "operatorFeluliras_01.03\operatorFeluliras_01.03.csproj", "{9B87F896-672C-4982-916C-F586CF879BAF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "operator_feluliras_01.14", "operator_feluliras_01.14\operator_feluliras_01.14.csproj", "{CAFC0233-CE67-428F-A458-98C2BCFF6E91}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -111,6 +113,10 @@ Global
 		{9B87F896-672C-4982-916C-F586CF879BAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9B87F896-672C-4982-916C-F586CF879BAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9B87F896-672C-4982-916C-F586CF879BAF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CAFC0233-CE67-428F-A458-98C2BCFF6E91}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CAFC0233-CE67-428F-A458-98C2BCFF6E91}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CAFC0233-CE67-428F-A458-98C2BCFF6E91}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CAFC0233-CE67-428F-A458-98C2BCFF6E91}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
