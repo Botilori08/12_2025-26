@@ -41,6 +41,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "operator_feluliras_01.14", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "koordianatak", "koordianatak\koordianatak.csproj", "{772D3036-CC10-4A79-B688-9A859B711D00}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Listás_01-16", "Listás_01-16\Listás_01-16.csproj", "{DF5B9FC8-D189-4669-AE4B-7F3187137BE6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -123,6 +125,10 @@ Global
 		{772D3036-CC10-4A79-B688-9A859B711D00}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{772D3036-CC10-4A79-B688-9A859B711D00}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{772D3036-CC10-4A79-B688-9A859B711D00}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF5B9FC8-D189-4669-AE4B-7F3187137BE6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF5B9FC8-D189-4669-AE4B-7F3187137BE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF5B9FC8-D189-4669-AE4B-7F3187137BE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF5B9FC8-D189-4669-AE4B-7F3187137BE6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
