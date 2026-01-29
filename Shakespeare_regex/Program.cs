@@ -12,13 +12,53 @@ namespace Shakespeare_regex
             Regex rg = new Regex(@"[A-ZÖÜÓŐÚÉÁŰÍ-]{2,}\s[A-ZÖÜÓŐÚÉÁŰÍ-]{2,}\b|[A-ZÖÜÓŐÚÉÁŰÍ-]{2,}\b");
             var eredmeny = rg.Matches(forras);
 
-            /*Console.WriteLine(eredmeny.Count);
-            Console.WriteLine();*/
 
             foreach (Match match in eredmeny)
             {
                 Console.WriteLine(match.Value);
             }
+
+            Regex romeo = new Regex(@"romeo",RegexOptions.IgnoreCase);
+            var eredmeny2 = romeo.Matches(forras);
+
+            /*Console.WriteLine(eredmeny.Count);
+            Console.WriteLine();*/
+
+
+            Console.WriteLine($"{eredmeny2.Count} db a Romeo név előfordulása");
+
+
+            Regex ragozottRomeo = new Regex(@"\bromeo[A-ZÖÜÓŐÚÉÁŰÍ]",RegexOptions.IgnoreCase);
+            var eredmeny3 = romeo.Matches(forras);
+
+            Console.WriteLine($"Rómeo ragozva: {eredmeny3.Count}");
+
+
+            Regex szamok = new Regex(@"[0-9]+");
+
+            var eredmeny4 = szamok.Matches(forras);
+
+            Console.WriteLine($"A számok száma: {eredmeny4.Count}");
+
+            //Évszámok keresése
+            Regex evszamok = new Regex(@"[0-9]{4}");
+
+            var eredmeny5 = evszamok.Matches(forras);
+
+            Console.WriteLine($"A számok száma: {eredmeny5.Count}");
+
+            //Első őr első szavai a megszólaláskor
+
+            Regex elsoor = new Regex(@"ELSŐ ŐR\t(\w[A-ZÖÜÓŐÚÉÁŰÍ])", RegexOptions.IgnoreCase);
+            var eredmeny6 = elsoor.Matches(forras);
+
+            foreach(Match match in eredmeny6)
+            {
+                Console.WriteLine(match.Value);
+            }
+            ;
+
+
 
         }
     }
