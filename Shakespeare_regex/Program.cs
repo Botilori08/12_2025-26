@@ -47,16 +47,22 @@ namespace Shakespeare_regex
 
             Console.WriteLine($"A számok száma: {eredmeny5.Count}");
 
+            Console.WriteLine();
             //Első őr első szavai a megszólaláskor
 
-            Regex elsoor = new Regex(@"ELSŐ ŐR\t(\w[A-ZÖÜÓŐÚÉÁŰÍ])", RegexOptions.IgnoreCase);
-            var eredmeny6 = elsoor.Matches(forras);
+            Regex elsoor = new Regex(@"ELSŐ ŐR\t([A-ZÖÜÓŐÚÉÁŰÍ]+)\s([A-ZÖÜÓŐÚÉÁŰÍ]+)", RegexOptions.IgnoreCase);
 
-            foreach(Match match in eredmeny6)
-            {
-                Console.WriteLine(match.Value);
-            }
-            ;
+            var eredmeny6 = elsoor.Match(forras);
+
+            Console.WriteLine(eredmeny6.Groups[0]);
+
+
+            elsoor = new Regex(@"ELSŐ ŐR\t(?<elso>[A-ZÖÜÓŐÚÉÁŰÍ]+)\s(?<masodik>[A-ZÖÜÓŐÚÉÁŰÍ]+)", RegexOptions.IgnoreCase);
+
+            eredmeny6 = elsoor.Match(forras);
+
+            Console.WriteLine(eredmeny6.Groups["elso"]);
+
 
 
 
