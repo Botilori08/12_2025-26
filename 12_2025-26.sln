@@ -51,6 +51,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "gyakRegExp", "gyakRegExp\gy
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shakespeare_regex", "Shakespeare_regex\Shakespeare_regex.csproj", "{5C79C994-15EE-4FC5-A55C-1348D553E55D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "nevesFeladat02.03", "nevesFeladat02.03\nevesFeladat02.03.csproj", "{A9662B05-12D1-4649-8934-761CCAFBD66E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -153,6 +155,10 @@ Global
 		{5C79C994-15EE-4FC5-A55C-1348D553E55D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5C79C994-15EE-4FC5-A55C-1348D553E55D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5C79C994-15EE-4FC5-A55C-1348D553E55D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A9662B05-12D1-4649-8934-761CCAFBD66E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9662B05-12D1-4649-8934-761CCAFBD66E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9662B05-12D1-4649-8934-761CCAFBD66E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9662B05-12D1-4649-8934-761CCAFBD66E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
