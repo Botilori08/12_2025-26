@@ -53,6 +53,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shakespeare_regex", "Shakes
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "nevesFeladat02.03", "nevesFeladat02.03\nevesFeladat02.03.csproj", "{A9662B05-12D1-4649-8934-761CCAFBD66E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "wpf02.04", "wpf02.04\wpf02.04.csproj", "{EE0BD42C-35B1-4737-B2B4-72C824D785EA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -159,6 +161,10 @@ Global
 		{A9662B05-12D1-4649-8934-761CCAFBD66E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A9662B05-12D1-4649-8934-761CCAFBD66E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A9662B05-12D1-4649-8934-761CCAFBD66E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE0BD42C-35B1-4737-B2B4-72C824D785EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE0BD42C-35B1-4737-B2B4-72C824D785EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE0BD42C-35B1-4737-B2B4-72C824D785EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE0BD42C-35B1-4737-B2B4-72C824D785EA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
