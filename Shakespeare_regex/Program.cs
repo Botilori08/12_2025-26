@@ -63,7 +63,7 @@ namespace Shakespeare_regex
 
             Console.WriteLine(eredmeny6.Groups["elso"]);
 
-
+            Console.WriteLine();
 
         }
     }
