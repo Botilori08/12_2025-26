@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.14.36414.22
+# Visual Studio Version 18
+VisualStudioVersion = 18.2.11415.280 d18.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PEZ OOP", "PEZ OOP\PEZ OOP.csproj", "{0E834661-361A-4C47-B905-532178990E73}"
 EndProject
@@ -54,6 +54,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "nevesFeladat02.03", "nevesFeladat02.03\nevesFeladat02.03.csproj", "{A9662B05-12D1-4649-8934-761CCAFBD66E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "wpf02.04", "wpf02.04\wpf02.04.csproj", "{EE0BD42C-35B1-4737-B2B4-72C824D785EA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "szamosGyak02.05", "szamosGyak02.05\szamosGyak02.05.csproj", "{BF5085E2-F951-4A2D-AEA6-A1C179B59120}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -165,6 +167,10 @@ Global
 		{EE0BD42C-35B1-4737-B2B4-72C824D785EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EE0BD42C-35B1-4737-B2B4-72C824D785EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EE0BD42C-35B1-4737-B2B4-72C824D785EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF5085E2-F951-4A2D-AEA6-A1C179B59120}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF5085E2-F951-4A2D-AEA6-A1C179B59120}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF5085E2-F951-4A2D-AEA6-A1C179B59120}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF5085E2-F951-4A2D-AEA6-A1C179B59120}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
