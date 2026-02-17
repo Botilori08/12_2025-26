@@ -5,8 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:belepteto_erettsegi_feladat"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Beléptető" Height="450" Width="800">
     <Grid>
+        <RadioButton Content="Az első kilépés" Margin="47,60,620,353" FontSize="14" Checked="RadioButton_Checked"/>
+        <Label Content="2. feladat" HorizontalAlignment="Left" Margin="47,10,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <RadioButton Content="Az utolsó kilépés" Margin="47,86,620,327" FontSize="14" Checked="RadioButton_Checked"/>
 
     </Grid>
 </Window>

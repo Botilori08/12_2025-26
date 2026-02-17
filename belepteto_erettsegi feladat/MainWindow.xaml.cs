@@ -23,17 +23,22 @@ namespace belepteto_erettsegi_feladat
 
             betoltes();
         }
-
+        List<Adat> adatok = new List<Adat>();
         void betoltes()
         {
             string[] sorok = File.ReadAllLines("bedat.txt");
-
-            List<Adat> adatok = new List<Adat>();
 
             foreach (var sor in sorok)
             {
                 adatok.Add(new Adat(sor));
             }
+
+
+
+        }
+
+        private void RadioButton_Checked(object sender, RoutedEventArgs e)
+        {
 
         }
     }
