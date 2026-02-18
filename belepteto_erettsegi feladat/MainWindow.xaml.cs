@@ -12,36 +12,51 @@ using System.Windows.Shapes;
 
 namespace belepteto_erettsegi_feladat
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
-    public partial class MainWindow : Window
-    {
-        public MainWindow()
-        {
-            InitializeComponent();
+	/// <summary>
+	/// Interaction logic for MainWindow.xaml
+	/// </summary>
+	public partial class MainWindow : Window
+	{
+		public MainWindow()
+		{
+			InitializeComponent();
 
-            betoltes();
-        }
-        List<Adat> adatok = new List<Adat>();
-        void betoltes()
-        {
-            string[] sorok = File.ReadAllLines("bedat.txt");
+			betoltes();
+		}
+		List<Adat> adatok = new List<Adat>();
+		void betoltes()
+		{
+			string[] sorok = File.ReadAllLines("bedat.txt");
 
-            foreach (var sor in sorok)
-            {
-                adatok.Add(new Adat(sor));
-            }
+			foreach (var sor in sorok)
+			{
+				adatok.Add(new Adat(sor));
+			}
 
 
 
-        }
+		}
 
-        private void RadioButton_Checked(object sender, RoutedEventArgs e)
-        {
+		private void Elso_Checked(object sender, RoutedEventArgs e)
+		{
+			RadioButton radio = sender as RadioButton;
 
-        }
-    }
+			if(radio.Name == "Elso")
+			{
+				kiir2.Text = adatok.First().ido;
+
+			}
+
+			if(radio.Name == "Utolso")
+			{
+				kiir2.Text = adatok.Last().ido;
+			}
+
+		}
+
+
+
+	}
 
 
 }
