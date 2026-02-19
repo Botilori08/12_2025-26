@@ -9,16 +9,31 @@
     <Grid>
         <TabControl>
             <TabItem Header="2.feladat">
-                <Grid Background="#FF95D4EA">
-                    <Label Content="2. feladat" HorizontalAlignment="Left" Margin="47,10,0,0" VerticalAlignment="Top" FontSize="20"/>
-                    <Label x:Name="felirat1" Content="Időpont:" HorizontalAlignment="Left" Height="36" Margin="185,54,0,0" VerticalAlignment="Top" Width="62" FontSize="14"/>
-                    <TextBlock x:Name="kiir2" HorizontalAlignment="Left" Height="21" Margin="252,59,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="92" FontSize="14"/>
-                    <RadioButton Name="Elso" Content="Az első belépés" HorizontalAlignment="Left" Margin="47,55,0,0" VerticalAlignment="Top" Checked="Elso_Checked"/>
-                    <RadioButton Name="Utolso" Content="Az utolsó kilépés" HorizontalAlignment="Left" Margin="47,75,0,0" VerticalAlignment="Top" Checked="Elso_Checked"/>
+                <Grid Background="#FF9FC3D0">
+                    <Label Content="2. feladat" HorizontalAlignment="Left" Margin="47,10,0,0" VerticalAlignment="Top" FontSize="20" Grid.ColumnSpan="2"/>
+                    <Label x:Name="felirat1" Content="Időpont:" HorizontalAlignment="Left" Height="36" Margin="168,47,0,0" VerticalAlignment="Top" Width="62" FontSize="14"/>
+                    <TextBlock x:Name="kiir2" HorizontalAlignment="Left" Height="21" Margin="235,52,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="92" FontSize="14"/>
+                    <RadioButton Name="Elso" Content="Az első belépés" HorizontalAlignment="Left" Margin="47,55,0,0" VerticalAlignment="Top" Checked="Elso_Checked" Grid.ColumnSpan="2"/>
+                    <RadioButton Name="Utolso" Content="Az utolsó kilépés" HorizontalAlignment="Left" Margin="47,75,0,0" VerticalAlignment="Top" Checked="Elso_Checked" Grid.ColumnSpan="2"/>
                 </Grid>
             </TabItem>
             <TabItem Header="3.feladat">
-                <Grid Background="#FF95D4EA"/>
+                <Grid Background="#FF9FC3D0">
+                    <Label Content="Megadott időpontok közötti belépők" HorizontalAlignment="Right" Margin="0,10,350,0" VerticalAlignment="Top" FontSize="20" Width="434"/>
+                    <TextBox x:Name="Innen" HorizontalAlignment="Left" Height="27" Margin="82,67,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="144" FontSize="18"/>
+                    <Label Content="Innentől:" HorizontalAlignment="Left" Height="25" Margin="10,67,0,0" VerticalAlignment="Top" Width="67" FontSize="14"/>
+                    <Label Content="Idáig:" HorizontalAlignment="Left" Height="33" Margin="10,108,0,0" VerticalAlignment="Top" Width="60" FontSize="14"/>
+                    <TextBox x:Name="Idaig" HorizontalAlignment="Left" Height="26" Margin="82,110,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="144" FontSize="18"/>
+                    <Button x:Name="kereses" Content="Keresés" HorizontalAlignment="Left" Height="69" Margin="266,67,0,0" VerticalAlignment="Top" Width="51" Click="kereses_Click"/>
+                    <Button Content="Fájlba mentés" HorizontalAlignment="Left" Height="69" Margin="346,67,0,0" VerticalAlignment="Top" Width="83"/>
+                    <ListView d:ItemsSource="{d:SampleData ItemCount=5}" Margin="0,162,0,0" Background="#FF9FC3D0" BorderBrush="{x:Null}" Foreground="Black">
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn/>
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
+                </Grid>
             </TabItem>
         </TabControl>
 

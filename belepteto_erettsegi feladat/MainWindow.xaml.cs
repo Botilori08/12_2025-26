@@ -1,5 +1,6 @@
 ﻿using System.IO;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -54,9 +55,44 @@ namespace belepteto_erettsegi_feladat
 
 		}
 
+        private void kereses_Click(object sender, RoutedEventArgs e)
+        {
+			string innen = Innen.Text;
+
+			string idaig = Idaig.Text;
+
+			
+
+			Regex minta = new Regex(@"^([01]\d|2\d):[0-5]\d$");
+
+			minta.IsMatch(innen);
+
+			if(minta.IsMatch(innen))
+			{
+				Innen.Foreground = Brushes.Black;
+			}
+			else
+			{
+                Innen.Foreground = Brushes.Red;
+				Innen.Focus();
+            }
+
+			if(minta.IsMatch(idaig))
+			{
+				Idaig.Foreground = Brushes.Black;
+            }
+			else
+			{
+				Idaig.Foreground = Brushes.Red;
+				Idaig.Focus();
+            }
 
 
-	}
+
+
+
+        }
+    }
 
 
 }
