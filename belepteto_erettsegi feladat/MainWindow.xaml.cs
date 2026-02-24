@@ -57,15 +57,16 @@ namespace belepteto_erettsegi_feladat
 
         private void kereses_Click(object sender, RoutedEventArgs e)
         {
+			bool isGood = true;
+
 			string innen = Innen.Text;
 
 			string idaig = Idaig.Text;
 
 			
 
-			Regex minta = new Regex(@"^([01]\d|2\d):[0-5]\d$");
+			Regex minta = new Regex(@"^([01]?\d|2[0-3]):[0-5]\d$");
 
-			minta.IsMatch(innen);
 
 			if(minta.IsMatch(innen))
 			{
@@ -75,17 +76,26 @@ namespace belepteto_erettsegi_feladat
 			{
                 Innen.Foreground = Brushes.Red;
 				Innen.Focus();
+				isGood = false;
             }
 
 			if(minta.IsMatch(idaig))
 			{
 				Idaig.Foreground = Brushes.Black;
+
+
             }
 			else
 			{
 				Idaig.Foreground = Brushes.Red;
 				Idaig.Focus();
+				isGood = false;
             }
+
+			var kesok = adatok.Where(adat => adat >= innen && adat <= idaig).Select(x => x.ido+" "+x.kod).ToList();
+
+			listView.ItemsSource = kesok;
+
 
 
 

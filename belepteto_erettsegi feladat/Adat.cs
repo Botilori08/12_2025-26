@@ -28,5 +28,43 @@ namespace belepteto_erettsegi_feladat
             this.ido = vag[1];
             this.esemenyKod = Convert.ToInt32(vag[2]);
         }
+
+        public static bool operator<(Adat a,string ido)
+        {
+            return perc(a.ido) < perc(ido);
+        }
+
+        public static bool operator >(Adat a, string ido)
+        {
+            return perc(a.ido) > perc(ido);
+        }
+
+        public static bool operator <=(Adat a, string ido)
+        {
+            return perc(a.ido) <= perc(ido);
+        }
+
+        public static bool operator >=(Adat a, string ido)
+        {
+            return perc(a.ido) >= perc(ido);
+        }
+
+        public static bool operator ==(Adat a, string ido)
+        {
+            return perc(a.ido) == perc(ido);
+        }
+
+        public static bool operator !=(Adat a, string ido)
+        {
+            return perc(a.ido) == perc(ido);
+        }
+
+
+        static int perc(string ido)
+        {
+            return (int)TimeSpan.Parse(ido).TotalSeconds;
+        }
+
+
     }
 }
