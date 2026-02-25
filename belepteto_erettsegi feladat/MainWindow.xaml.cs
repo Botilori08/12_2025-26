@@ -25,6 +25,7 @@ namespace belepteto_erettsegi_feladat
 			betoltes();
 		}
 		List<Adat> adatok = new List<Adat>();
+		List <string> kesok = new List<string>();
 		void betoltes()
 		{
 			string[] sorok = File.ReadAllLines("bedat.txt");
@@ -92,16 +93,27 @@ namespace belepteto_erettsegi_feladat
 				isGood = false;
             }
 
-			var kesok = adatok.Where(adat => adat >= innen && adat <= idaig).Select(x => x.ido+" "+x.kod).ToList();
+			kesok = adatok.Where(adat => adat >= innen && adat <= idaig).Select(x => x.ido+" "+x.kod).ToList();
 
 			listView.ItemsSource = kesok;
 
-
-
-
-
-
         }
+
+        private void fajlbaIr_Click(object sender, RoutedEventArgs e)
+        {
+			File.WriteAllLines("kesok.txt",kesok.ToArray());
+
+			MessageBox.Show("Sikeres mentés!\nFájl létrehozva!");
+        }
+
+		enum kodok
+		{
+			Belepes = 1,
+			Kilepes = 2,
+			Menza = 3,
+			Konyvtar = 4
+		}
+
     }
 
 

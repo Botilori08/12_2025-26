@@ -7,14 +7,14 @@
         mc:Ignorable="d"
         Title="Beléptető" Height="450" Width="800">
     <Grid>
-        <TabControl>
+        <TabControl SelectionChanged="TabControl_SelectionChanged">
             <TabItem Header="2.feladat">
                 <Grid Background="#FF9FC3D0">
                     <Label Content="2. feladat" HorizontalAlignment="Left" Margin="47,10,0,0" VerticalAlignment="Top" FontSize="20" Grid.ColumnSpan="2"/>
                     <Label x:Name="felirat1" Content="Időpont:" HorizontalAlignment="Left" Height="36" Margin="168,47,0,0" VerticalAlignment="Top" Width="62" FontSize="14"/>
                     <TextBlock x:Name="kiir2" HorizontalAlignment="Left" Height="21" Margin="235,52,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="92" FontSize="14"/>
-                    <RadioButton Name="Elso" Content="Az első belépés" HorizontalAlignment="Left" Margin="47,55,0,0" VerticalAlignment="Top" Checked="Elso_Checked" Grid.ColumnSpan="2"/>
-                    <RadioButton Name="Utolso" Content="Az utolsó kilépés" HorizontalAlignment="Left" Margin="47,75,0,0" VerticalAlignment="Top" Checked="Elso_Checked" Grid.ColumnSpan="2"/>
+                    <RadioButton Name="Elso" Content="Az első belépés" HorizontalAlignment="Left" Margin="47,55,0,0" VerticalAlignment="Top" Checked="Elso_Checked" Width="116"/>
+                    <RadioButton Name="Utolso" Content="Az utolsó kilépés" HorizontalAlignment="Left" Margin="47,75,0,0" VerticalAlignment="Top" Checked="Elso_Checked" Height="16" Width="116"/>
                 </Grid>
             </TabItem>
             <TabItem Header="3.feladat">
@@ -25,8 +25,8 @@
                     <Label Content="Idáig:" HorizontalAlignment="Left" Height="33" Margin="10,108,0,0" VerticalAlignment="Top" Width="60" FontSize="14"/>
                     <TextBox x:Name="Idaig" HorizontalAlignment="Left" Height="26" Margin="82,110,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="144" FontSize="18"/>
                     <Button x:Name="kereses" Content="Keresés" HorizontalAlignment="Left" Height="69" Margin="266,67,0,0" VerticalAlignment="Top" Width="51" Click="kereses_Click"/>
-                    <Button Content="Fájlba mentés" HorizontalAlignment="Left" Height="69" Margin="346,67,0,0" VerticalAlignment="Top" Width="83"/>
-                    <ListView x:Name="listView" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="0,162,0,0" Background="#FF9FC3D0" BorderBrush="{x:Null}" Foreground="Black">
+                    <Button x:Name="fajlbaIr" Content="Fájlba mentés" HorizontalAlignment="Left" Height="69" Margin="346,67,0,0" VerticalAlignment="Top" Width="83" Click="fajlbaIr_Click"/>
+                    <ListView x:Name="listView" Margin="0,162,0,0" Background="#FF9FC3D0" BorderBrush="{x:Null}" Foreground="Black">
                         <ListView.View>
                             <GridView>
                                 <GridViewColumn/>
@@ -35,6 +35,18 @@
                     </ListView>
                 </Grid>
             </TabItem>
+            <TabItem Header="4.feladat" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,1,0,0">
+                <Grid>
+                    <ComboBox Width="120" Margin="201,32,473,348"/>
+                    <Label Content="Hányan csinálták ezt:" HorizontalAlignment="Left" Margin="10,28,0,0" VerticalAlignment="Top" FontSize="18"/>
+                </Grid>
+            </TabItem>
+            
+
+
+
+
+
         </TabControl>
 
 
