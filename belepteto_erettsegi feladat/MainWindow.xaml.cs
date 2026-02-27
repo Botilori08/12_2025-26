@@ -114,6 +114,15 @@ namespace belepteto_erettsegi_feladat
 			Konyvtar = 4
 		}
 
+        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+			ComboBox elem = sender as ComboBox;
+
+			var eredmeny = adatok.Where(e => e.esemenyKod == elem.SelectedIndex+1).ToList();
+
+			szama.Text = eredmeny.Count().ToString();
+
+        }
     }
 
 
