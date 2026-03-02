@@ -11,15 +11,15 @@
             <TabItem Header="2.feladat">
                 <Grid Background="#FFFFFFFF">
                     <Label Content="2. feladat" HorizontalAlignment="Left" Margin="47,10,0,0" VerticalAlignment="Top" FontSize="20" Grid.ColumnSpan="2"/>
-                    <Label x:Name="felirat1" Content="Időpont:" HorizontalAlignment="Left" Height="36" Margin="168,47,0,0" VerticalAlignment="Top" Width="62" FontSize="14"/>
-                    <TextBlock x:Name="kiir2" HorizontalAlignment="Left" Height="21" Margin="235,52,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="92" FontSize="14"/>
-                    <RadioButton Name="Elso" Content="Az első belépés" HorizontalAlignment="Left" Margin="47,55,0,0" VerticalAlignment="Top" Checked="Elso_Checked" Width="116"/>
-                    <RadioButton Name="Utolso" Content="Az utolsó kilépés" HorizontalAlignment="Left" Margin="47,75,0,0" VerticalAlignment="Top" Checked="Elso_Checked" Height="16" Width="116"/>
+                    <Label x:Name="felirat1" Content="Időpont:" HorizontalAlignment="Left" Height="36" Margin="173,49,0,0" VerticalAlignment="Top" Width="62" FontSize="14"/>
+                    <TextBlock x:Name="kiir2" HorizontalAlignment="Left" Height="21" Margin="235,53,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="92" FontSize="14"/>
+                    <RadioButton Name="Elso" Content="Az első belépés" HorizontalAlignment="Left" Margin="47,55,0,0" VerticalAlignment="Top" Checked="Elso_Checked" Width="136" FontSize="14"/>
+                    <RadioButton Name="Utolso" Content="Az utolsó kilépés" HorizontalAlignment="Left" Margin="47,75,0,0" VerticalAlignment="Top" Checked="Elso_Checked" Height="16" Width="136" FontSize="14"/>
                 </Grid>
             </TabItem>
             <TabItem Header="3.feladat">
                 <Grid Background="#FFFFFFFF">
-                    <Label Content="Megadott időpontok közötti belépők" HorizontalAlignment="Right" Margin="0,10,350,0" VerticalAlignment="Top" FontSize="20" Width="434"/>
+                    <Label Content="Megadott időpontok közötti belépők" HorizontalAlignment="Right" Margin="0,10,336,0" VerticalAlignment="Top" FontSize="20" Width="434"/>
                     <TextBox x:Name="Innen" HorizontalAlignment="Left" Height="27" Margin="82,67,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="144" FontSize="18"/>
                     <Label Content="Innentől:" HorizontalAlignment="Left" Height="25" Margin="10,67,0,0" VerticalAlignment="Top" Width="67" FontSize="14"/>
                     <Label Content="Idáig:" HorizontalAlignment="Left" Height="33" Margin="10,108,0,0" VerticalAlignment="Top" Width="60" FontSize="14"/>
@@ -50,7 +50,22 @@
             </TabItem>
             <TabItem Header="5.feladat">
                 <Grid>
-
+                    <Label x:Name="cim" Content="" HorizontalAlignment="Left" Margin="38,18,0,0" VerticalAlignment="Top" Width="168" FontSize="16"/>
+                    <ComboBox x:Name="egyikKivalasztott" HorizontalAlignment="Left"  Width="155" Height="25" SelectionChanged="ComboBox_SelectionChanged" Margin="111,119,0,262">
+                        <ComboBoxItem Background="#FF78CC40" Content="Belépés"/>
+                        <ComboBoxItem Background="#FFE23E3E" Content="Kilépés"/>
+                        <ComboBoxItem Background="#FFECD645" Content="Menza"/>
+                        <ComboBoxItem Background="#FF5ED5DE" Content="Könyvtár"/>
+                    </ComboBox>
+                    <ComboBox x:Name="masikKivalasztott" HorizontalAlignment="Left"  Width="155" Height="25" SelectionChanged="ComboBox_SelectionChanged" Margin="498,119,0,262">
+                        <ComboBoxItem Background="#FF78CC40" Content="Belépés"/>
+                        <ComboBoxItem Background="#FFE23E3E" Content="Kilépés"/>
+                        <ComboBoxItem Background="#FFECD645" Content="Menza"/>
+                        <ComboBoxItem Background="#FF5ED5DE" Content="Könyvtár"/>
+                    </ComboBox>
+                    <Label x:Name="relacioJel" Content="" HorizontalAlignment="Center" Height="123" Margin="0,175,0,0" VerticalAlignment="Top" Width="58" FontSize="72"/>
+                    <Label x:Name="elso" HorizontalAlignment="Left" Height="88" Margin="111,203,0,0" VerticalAlignment="Top" Width="144" FontSize="36"/>
+                    <Label x:Name="masodik" HorizontalAlignment="Left" Height="88" Margin="509,203,0,0" VerticalAlignment="Top" Width="144" FontSize="36"/>
                 </Grid>
             </TabItem>
 

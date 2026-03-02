@@ -26,6 +26,10 @@ namespace belepteto_erettsegi_feladat
 		}
 		List<Adat> adatok = new List<Adat>();
 		List <string> kesok = new List<string>();
+
+		string hely = "";
+
+
 		void betoltes()
 		{
 			string[] sorok = File.ReadAllLines("bedat.txt");
@@ -123,6 +127,17 @@ namespace belepteto_erettsegi_feladat
 			szama.Text = eredmeny.Count().ToString();
 
         }
+
+		private void egyikKivalasztott_SelectionChanged(object sender, SelectionChangedEventArgs e)
+		{
+			ComboBox egyikElem = sender as ComboBox;
+
+			hely = egyikElem.SelectedValue.ToString();
+
+			
+		
+		}
+
     }
 
 
