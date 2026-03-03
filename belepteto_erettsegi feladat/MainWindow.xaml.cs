@@ -27,8 +27,6 @@ namespace belepteto_erettsegi_feladat
 		List<Adat> adatok = new List<Adat>();
 		List <string> kesok = new List<string>();
 
-		string hely = "";
-
 
 		void betoltes()
 		{
@@ -128,16 +126,41 @@ namespace belepteto_erettsegi_feladat
 
         }
 
-		private void egyikKivalasztott_SelectionChanged(object sender, SelectionChangedEventArgs e)
-		{
-			ComboBox egyikElem = sender as ComboBox;
+        private void kivalaszt_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+			ComboBox elem = sender as ComboBox;
 
-			hely = egyikElem.SelectedValue.ToString();
+			int kivalasztott = elem.SelectedIndex + 1;
 
-			
-		
-		}
+			var szurt = adatok
+				.Where(e => e.esemenyKod == kivalasztott)
+				.Select(e => e.kod)
+				.Distinct()
+				.Count();
 
+			if(elem.Name == "egyikKivalasztott")
+			{
+				bal.Content = szurt;
+			}
+            else
+            {
+                jobb.Content = szurt;
+            }
+
+			if(bal.Content != "" && jobb.Content != "")
+			{
+
+				int bal = int.Parse(bal.Content.ToString());
+				int jobb = 
+
+				if(Convert.ToInt32(bal.Content) > Convert.ToInt32(jobb.Content))
+				{
+
+				}
+			}
+
+
+        }
     }
 
 

@@ -49,23 +49,23 @@
                 </Grid>
             </TabItem>
             <TabItem Header="5.feladat">
-                <Grid>
-                    <Label x:Name="cim" Content="" HorizontalAlignment="Left" Margin="38,18,0,0" VerticalAlignment="Top" Width="168" FontSize="16"/>
-                    <ComboBox x:Name="egyikKivalasztott" HorizontalAlignment="Left"  Width="155" Height="25" SelectionChanged="ComboBox_SelectionChanged" Margin="111,119,0,262">
+                <Grid Width="798">
+                    <ComboBox x:Name="egyikKivalasztott" HorizontalAlignment="Left"  Width="155" Margin="111,105,0,247" SelectionChanged="kivalaszt_SelectionChanged">
                         <ComboBoxItem Background="#FF78CC40" Content="Belépés"/>
                         <ComboBoxItem Background="#FFE23E3E" Content="Kilépés"/>
                         <ComboBoxItem Background="#FFECD645" Content="Menza"/>
                         <ComboBoxItem Background="#FF5ED5DE" Content="Könyvtár"/>
                     </ComboBox>
-                    <ComboBox x:Name="masikKivalasztott" HorizontalAlignment="Left"  Width="155" Height="25" SelectionChanged="ComboBox_SelectionChanged" Margin="498,119,0,262">
+                    <ComboBox x:Name="masikKivalasztott" HorizontalAlignment="Left"  Width="155" Margin="498,105,0,247" SelectionChanged="kivalaszt_SelectionChanged">
                         <ComboBoxItem Background="#FF78CC40" Content="Belépés"/>
                         <ComboBoxItem Background="#FFE23E3E" Content="Kilépés"/>
                         <ComboBoxItem Background="#FFECD645" Content="Menza"/>
                         <ComboBoxItem Background="#FF5ED5DE" Content="Könyvtár"/>
                     </ComboBox>
-                    <Label x:Name="relacioJel" Content="" HorizontalAlignment="Center" Height="123" Margin="0,175,0,0" VerticalAlignment="Top" Width="58" FontSize="72"/>
-                    <Label x:Name="elso" HorizontalAlignment="Left" Height="88" Margin="111,203,0,0" VerticalAlignment="Top" Width="144" FontSize="36"/>
-                    <Label x:Name="masodik" HorizontalAlignment="Left" Height="88" Margin="509,203,0,0" VerticalAlignment="Top" Width="144" FontSize="36"/>
+                    <Label x:Name="relacioJel" Content="" HorizontalAlignment="Left" Height="123" Margin="358,168,0,0" VerticalAlignment="Top" Width="58" FontSize="72"/>
+                    <Label x:Name="bal" HorizontalAlignment="Left" Height="88" Margin="111,203,0,0" VerticalAlignment="Top" Width="144" FontSize="36"/>
+                    <Label x:Name="jobb" HorizontalAlignment="Left" Height="88" Margin="509,203,0,0" VerticalAlignment="Top" Width="144" FontSize="36"/>
+                    <Label Content="Melyikből volt több?" HorizontalAlignment="Left" Margin="38,34,0,0" VerticalAlignment="Top" Width="235" Height="52"/>
                 </Grid>
             </TabItem>
 
