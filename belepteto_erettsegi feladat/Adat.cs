@@ -56,8 +56,44 @@ namespace belepteto_erettsegi_feladat
 
         public static bool operator !=(Adat a, string ido)
         {
-            return perc(a.ido) == perc(ido);
+            return perc(a.ido) != perc(ido);
         }
+
+
+
+        //operátorok intre
+
+        public static bool operator <(Adat a, int ido)
+        {
+            return perc(a.ido) < ido;
+        }
+
+        public static bool operator >(Adat a, int ido)
+        {
+            return perc(a.ido) > ido;
+        }
+
+        public static bool operator <=(Adat a, int ido)
+        {
+            return perc(a.ido) <= ido;
+        }
+
+        public static bool operator >=(Adat a, int ido)
+        {
+            return perc(a.ido) >= ido;
+        }
+
+        public static bool operator ==(Adat a, int ido)
+        {
+            return perc(a.ido) == ido;
+        }
+
+        public static bool operator !=(Adat a, int ido)
+        {
+            return perc(a.ido) != ido;
+        }
+
+
 
 
         static int perc(string ido)

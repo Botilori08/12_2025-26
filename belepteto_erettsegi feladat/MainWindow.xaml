@@ -68,6 +68,30 @@
                     <Label Content="Melyikből volt több?" HorizontalAlignment="Left" Margin="38,34,0,0" VerticalAlignment="Top" Width="235" Height="52"/>
                 </Grid>
             </TabItem>
+            <TabItem HorizontalAlignment="Center" Height="20" Header="6. feladat" VerticalAlignment="Top" Width="60" Margin="0,-1,0,0">
+                <Grid Background="#FFE5E5E5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="35*"/>
+                        <ColumnDefinition Width="759*"/>
+                    </Grid.ColumnDefinitions>
+                    <Rectangle Grid.Column="1" HorizontalAlignment="Left" Height="312" Margin="254,0,0,0" Stroke="Black" VerticalAlignment="Center" Width="153"/>
+                    <Label Grid.Column="1" Content="Dász Íz szkúl" HorizontalAlignment="Left" Margin="292,60,0,0" VerticalAlignment="Top"/>
+                    <Label Grid.Column="1" Content="Das ist nicht die Schule (oder előtte)" HorizontalAlignment="Left" Margin="10,124,0,0" VerticalAlignment="Top" Width="208"/>
+                    <ListBox x:Name="diakokBelep" Grid.Column="1" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="263,152,361,64"/>
+                    <Label x:Name="szamlalo" Grid.Column="1" Content="500" HorizontalAlignment="Left" Margin="299,98,0,0" VerticalAlignment="Top" Height="49" Width="62" FontSize="28" FontWeight="Bold"/>
+                    <Label x:Name="szamlalo2" Grid.Column="1" Content="500" HorizontalAlignment="Left" Margin="83,155,0,0" VerticalAlignment="Top" Height="49" Width="62" FontSize="28" FontWeight="Bold"/>
+                    <ListBox Grid.Column="1" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="47,203,578,13"/>
+                    <ListBox Grid.Column="1" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="457,152,167,64"/>
+                    <Label x:Name="szamlalo3" Grid.Column="1" Content="500" HorizontalAlignment="Left" Margin="493,98,0,0" VerticalAlignment="Top" Height="49" Width="62" FontSize="28" FontWeight="Bold"/>
+                    <Label Grid.Column="1" Content="Tschalók" HorizontalAlignment="Left" Margin="497,68,0,0" VerticalAlignment="Top"/>
+                    <Label x:Name="ora" Content="07:00" HorizontalAlignment="Left" Margin="14,27,0,0" VerticalAlignment="Top" Height="92" Width="131" FontSize="48" FontWeight="Bold" Grid.Column="1"/>
+                    <Button x:Name="Reset" Grid.Column="1" Content="Reset" HorizontalAlignment="Left" Margin="614,269,0,0" VerticalAlignment="Top" Height="51" Width="135" FontSize="28" FontWeight="Bold" Background="#FFC50000" Click="Reset_Click"/>
+                    <Button x:Name="id10t" Grid.Column="1" Content="id10t" HorizontalAlignment="Left" Margin="690,217,0,0" VerticalAlignment="Top" Height="25" Width="39" FontSize="11" FontWeight="Bold" Background="#4C0A6C79" Click="id10t_Click"/>
+                </Grid>
+            </TabItem>
+
+
+
 
 
 
