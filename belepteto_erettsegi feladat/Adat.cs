@@ -98,9 +98,14 @@ namespace belepteto_erettsegi_feladat
 
         static int perc(string ido)
         {
-            return (int)TimeSpan.Parse(ido).TotalSeconds;
+            return (int)TimeSpan.Parse(ido).TotalMinutes;
         }
 
+        int percben()
+        {
+            return (int)TimeSpan.Parse(ido).TotalMinutes;
+        }
+        
 
     }
 }

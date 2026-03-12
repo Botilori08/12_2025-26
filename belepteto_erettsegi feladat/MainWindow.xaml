@@ -84,9 +84,9 @@
                     <ListBox Grid.Column="1" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="457,152,167,64"/>
                     <Label x:Name="szamlalo3" Grid.Column="1" Content="500" HorizontalAlignment="Left" Margin="493,98,0,0" VerticalAlignment="Top" Height="49" Width="62" FontSize="28" FontWeight="Bold"/>
                     <Label Grid.Column="1" Content="Tschalók" HorizontalAlignment="Left" Margin="497,68,0,0" VerticalAlignment="Top"/>
-                    <Label x:Name="ora" Content="07:00" HorizontalAlignment="Left" Margin="14,27,0,0" VerticalAlignment="Top" Height="92" Width="131" FontSize="48" FontWeight="Bold" Grid.Column="1"/>
+                    <Label x:Name="ora" Content="07:00" HorizontalAlignment="Left" Margin="14,27,0,0" VerticalAlignment="Top" Height="92" Width="148" FontSize="48" FontWeight="Bold" Grid.Column="1"/>
                     <Button x:Name="Reset" Grid.Column="1" Content="Reset" HorizontalAlignment="Left" Margin="614,269,0,0" VerticalAlignment="Top" Height="51" Width="135" FontSize="28" FontWeight="Bold" Background="#FFC50000" Click="Reset_Click"/>
-                    <Button x:Name="id10t" Grid.Column="1" Content="id10t" HorizontalAlignment="Left" Margin="690,217,0,0" VerticalAlignment="Top" Height="25" Width="39" FontSize="11" FontWeight="Bold" Background="#4C0A6C79" Click="id10t_Click"/>
+                    <Button x:Name="id10t" Grid.Column="1" Content="id10t" HorizontalAlignment="Left" Margin="614,217,0,0" VerticalAlignment="Top" Height="30" Width="135" FontSize="11" FontWeight="Bold" Background="#4C0A6C79" Click="id10t_Click"/>
                 </Grid>
             </TabItem>
 
